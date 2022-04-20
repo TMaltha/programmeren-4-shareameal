@@ -48,8 +48,8 @@ app.get("/api/movie/:movieId", (req, res, next) => {
       result: movie,
     });
   } else {
-    res.status(401).json({
-      status: 401,
+    res.status(404).json({
+      status: 404,
       result: `Movie with ID ${movieId} not found`,
     });
   }
@@ -63,8 +63,8 @@ app.get("/api/movie", (req, res, next) => {
 });
 
 app.all("*", (req, res) => {
-  res.status(401).json({
-    status: 401,
+  res.status(404).json({
+    status: 404,
     result: "End-point not found",
   });
 });
