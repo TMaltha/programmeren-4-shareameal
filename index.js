@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 let database = [];
 let id = 0;
 
+
 app.all("*", (req, res, next) => {
   const method = req.method;
   console.log(`Method ${method} is aangeroepen`);
